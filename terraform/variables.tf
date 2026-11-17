@@ -1,3 +1,13 @@
+variable "location" {
+  type    = string
+  default = "Central India"
+}
+
+variable "resource_group_name" {
+  type    = string
+  default = "rg-k3s-demo"
+}
+
 variable "vnet_name" {
   type    = string
   default = "vnet-k3s"
