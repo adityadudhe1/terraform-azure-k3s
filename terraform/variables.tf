@@ -1,9 +1,19 @@
-variable "location" {
+variable "vnet_name" {
   type    = string
-  default = "Central India"
+  default = "vnet-k3s"
 }
 
-variable "resource_group_name" {
+variable "subnet_name" {
   type    = string
-  default = "rg-k3s-demo"
+  default = "subnet-k3s"
+}
+
+variable "vnet_cidr" {
+  type    = list(string)
+  default = ["10.0.0.0/16"]
+}
+
+variable "subnet_cidr" {
+  type    = list(string)
+  default = ["10.0.1.0/24"]
 }
