@@ -51,3 +51,18 @@ variable "worker_vm_name" {
 variable "ssh_public_key" {
   type = string
 }
+
+variable "master_public_ip_name" {
+  type    = string
+  default = "master01-pip"
+}
+
+variable "master_nic_name" {
+  type    = string
+  default = "master01-nic"
+}
+
+variable "worker_nic_name" {
+  type    = string
+  default = "worker01-nic"
+}
