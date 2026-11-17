@@ -1,13 +1,13 @@
 resource "azurerm_virtual_network" "k3s" {
-  name                = "vnet-k3s"
-  address_space       = ["10.0.0.0/16"]
+  name                = var.vnet_name
+  address_space       = var.vnet_cidr
   location            = azurerm_resource_group.k3s.location
   resource_group_name = azurerm_resource_group.k3s.name
 }
 
 resource "azurerm_subnet" "k3s" {
-  name                 = "subnet-k3s"
+  name                 = var.subnet_name
   resource_group_name  = azurerm_resource_group.k3s.name
   virtual_network_name = azurerm_virtual_network.k3s.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = var.subnet_cidr
 }
