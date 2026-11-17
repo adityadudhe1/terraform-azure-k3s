@@ -1,4 +1,4 @@
 resource "azurerm_resource_group" "k3s" {
-  name     = "rg-k3s-demo"
+  name     = var.resource_group_name
   location = var.location
 }
