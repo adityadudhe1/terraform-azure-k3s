@@ -9,3 +9,15 @@ output "vnet_name" {
 output "subnet_name" {
   value = azurerm_subnet.k3s.name
 }
+
+output "master_public_ip" {
+  value = azurerm_public_ip.master.ip_address
+}
+
+output "master_private_ip" {
+  value = azurerm_network_interface.master.private_ip_address
+}
+
+output "worker_private_ip" {
+  value = azurerm_network_interface.worker.private_ip_address
+}
