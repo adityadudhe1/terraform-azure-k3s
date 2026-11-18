@@ -18,7 +18,7 @@ ansible_user=azureuser
 ansible_ssh_private_key_file=~/.ssh/k3s_azure
 
 [workers:vars]
-ansible_ssh_common_args='-o ProxyJump=azureuser@${MASTER_PUBLIC_IP}'
+ansible_ssh_common_args='-o ProxyJump=master01'
 EOF
 
 echo "inventory.ini generated successfully"
